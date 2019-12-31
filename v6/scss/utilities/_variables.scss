@@ -1,0 +1,85 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Breakpoints 
+
+$breakpoint-s: 550px;                                      // Small screen breakpoint (phones, landscape)
+$breakpoint-m: 768px;                                      // Medium screen breakpoint (tablet)
+$breakpoint-l: 1330px;                                     // Large screen breakpoint (>laptop)
+
+// Colors
+
+$color-bg: #FFF;                                           // Background color
+$color-bg-header: #222;                                    // Background header color
+$color-bg-footer: #313439;                                 // Background footer color
+$color-bg-related: #F2ECFF;                                // Background "related" color
+$color-footer: #FFF;                                       // Footer text color
+$color-header: #FFF;                                       // Header text color
+$color-link: #C33;                                         // Link color
+$color-link-hover: darken($color-link, 15%);               // Link color (hover)
+$color-logo-dribbble: #EA4C89;                             // Dribbble color
+$color-logo-facebook: #3B5998;                             // Facebook color
+$color-logo-github: #6E5494;                               // Github color
+$color-logo-google-plus: #D34836;                          // Google Plus color
+$color-logo-instagram: #CD486B;                            // Instagram color
+$color-logo-linkedin: #0077B5;                             // LinkedIn color
+$color-logo-medium: #00AB6C;                               // Medium color
+$color-overlay: #000;                                      // Overlay color
+$color-quote: #C33;                                        // Quote color
+$color-section: #D3D3D3;                                   // Section description tag color
+$color-text: #000;                                         // Text color
+$color-text-alt: #FFF;                                     // Text color (dark backgrounds)
+
+// Fonts
+
+$font-size-base: 20px;                                     // Base font size
+$font-size-contents: 1rem;                                 // Article contents list font size
+$font-size-fa: 1.2rem;                                     // Font Awesome font size
+$font-size-h1: 1.953rem;                                   // h1 font size
+$font-size-h2: 1.563rem;                                   // h2 font size
+$font-size-h3: 1.25rem;                                    // h3 font size
+$font-size-h4: 1rem;                                       // h4 font size
+$font-size-h5: 0.75rem;                                     // h5 font size
+$font-size-h6: 0.6rem;                                    // h6 font size
+$font-size-super: 3rem;                                    // Super font size
+$font-primary: "Raleway", sans-serif;                      // Default page font
+$font-secondary: "Montserrat", sans-serif;                 // h1-h6 font
+$font-tertiary: "Josefin Sans", sans-serif;                // Hero font
+$line-height: 1.5;                                         // Line height
+
+// Letter spacing
+
+$spacing-letter-h2: 4px;                                   // Letter spacing (h2 tags)
+$spacing-letter-h4: 3px;                                   // Letter spacing (h4 tags)
+$spacing-letter-h5: 3px;                                   // Letter spacing (h5 tags)
+$spacing-letter-h6: 2px;                                   // Letter spacing (h6 tags)
+
+// Scaling and transitions
+
+$scale-hover-card: scale(1.05);                             // Hover scaling (cards only)
+$transition-hover: 0.5s ease;                              // Hover transition
+$transition-hover-card: all .3s ease-in-out;               // Hover transition (cards only)
+$transition-scroll: top 0.5s ease;                         // Hyperlink scroll transition
+
+
+// Widths and heights
+$height-footer: 100px;                                     // Footer height
+$height-header-s: 36px;                                    // Header height (small screens, bottom section only)
+$height-header-m: 56px;                                    // Header height (medium screens)
+$height-input: 46px;                                       // Input height
+$height-logo: 40px;                                        // Logo height
+$width-card-s: 48%;                                        // Card width (small screens)
+$width-card-m: 32%;                                        // Card width (small screens)
+$width-form-s: 90%;                                        // Form width (small screens)
+$width-iconsdiv: 250px;                                    // "Icons-div" width
+$width-logo: 80px;                                         // Logo width
+$width-max-card-list: 600px;                               // List card max width
+$width-max-form-s: 450px;                                  // Form max width (small screens)
+$width-max-form-m: 550px;                                  // Form max width (medium screens)
+$width-max-image-list: 250px;                              // List image max width
+$width-max-hero-article: 1920px;                           // Article hero max width
+$width-max-p-s: 550px;                                     // Paragraph max width (small screens)
+$width-max-p-m: 630px;                                     // Paragraph max width (medium screens)
+$width-max-search: 500px;                                  // Search input max width (medium screens)
+$width-max-website: 1080px;                                // Max width of website

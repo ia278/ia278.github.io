@@ -1,0 +1,48 @@
+/* ======================================
+//  Footer styles
+// ====================================*/
+
+.footer {
+  @include flexbox(row wrap, center);
+  background-color: $color-bg-footer;
+  height: $height-footer;
+  margin: 0 auto;
+  width: 100%;
+  &-container {
+    @include flexbox(row wrap, center);
+    height: 100%;
+    width: 98%;
+    ul {
+      @include flexbox(row wrap, center);
+      list-style-type: none;
+      margin: 0 0 5px;
+      padding: 0;
+      li {
+        font-size: $font-size-fa;
+        margin: 0 10px;
+        text-align: center;
+        width: 30px;
+        a {
+          color: $color-footer;
+          text-decoration: none;
+        }
+      }
+    }
+    .copyright {
+      color: $color-footer;
+      letter-spacing: 0.1rem;
+      margin: 5px 0 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+
+@media all and (min-width: $breakpoint-m) {
+  .footer {
+    &-container {
+      max-width: $width-max-website;
+    }
+  }
+}

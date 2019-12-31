@@ -1,0 +1,38 @@
+/* ======================================
+//  Landing styles
+// ====================================*/
+
+.landing {
+	@include flexbox(row wrap, center);
+	@include positioning;
+	a {
+		color: $color-text;
+		text-decoration: none;
+	}
+	.button {
+		margin: 25px auto;
+	}
+	&-container {
+		@include flexbox(row wrap, center);
+    width: 98%;
+	}
+	&-listing {
+		@include flexbox(row wrap, center, $align-items: flex-start);   
+		width: 98%;
+	}
+}
+
+@media all and (min-width: $breakpoint-m) {
+	.landing {
+		&-container {
+			max-width: $width-max-website;
+		}
+		&-card {
+			width: 32%;
+			&:hover {
+        transition: $transition-hover-card;
+        transform: $scale-hover-card;
+      }
+		}
+	}
+}

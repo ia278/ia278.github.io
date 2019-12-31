@@ -1,0 +1,60 @@
+/* ======================================
+//  Error styles
+// ====================================*/
+
+.error {
+	@include flexbox(row wrap, center);
+	@include positioning(margin-top);
+	color: $color-text-alt;
+	text-align: center;
+	min-height: calc(100vh - #{$height-header-s} - #{$height-logo});     
+	height: 90vh;   // Needed to solve IE11 min-height container centering bug.
+	&-container {
+		@include flexbox(row wrap, center);
+    width: 95%;
+		h1 {
+			font: bold $font-size-super $font-tertiary;
+			margin: 0;
+			padding: 15px 0;
+			width: 100%;
+		}
+		p {
+			margin: 0;
+			padding: 15px 0;
+			width: 95%;
+		}
+		ul {
+			list-style-position: inside;
+			margin: 0;
+			padding: 15px 0;
+			width: 95%;
+		}
+	}
+	&-search {
+		@include flexbox(row wrap, center);
+		max-width: $width-max-search;
+		padding: 15px 0;
+		width: 95%;
+		input {
+			height: $height-input;
+			margin-right: 15px;
+			text-align: center;
+			width: calc(100% - 80px);
+		}
+		button {
+			padding: calc((#{$height-input} - 1rem) / 2);    // Fix for vertical align issue with links. 1rem is default page font-size.
+			svg {
+				height: 20px;
+			}
+		}
+	}
+}
+
+@media all and (min-width: $breakpoint-m) {
+	.error {
+		min-height: calc(100vh - #{$height-header-m});
+		&-container {
+			max-width: $width-max-website;
+		}
+	}
+}

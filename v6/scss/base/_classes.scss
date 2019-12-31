@@ -1,0 +1,324 @@
+/* ======================================
+//  Class styles
+// ====================================*/
+
+.border {
+  border: thin solid red;
+}
+.active {
+	&::before {
+		background-color: $color-header;
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 4px;
+		top: 2px;
+		width: 100%;
+	}
+	&:hover::before {
+		background-color: $color-link;
+		transition: $transition-hover;
+	}
+}
+.bold {
+  font-weight: bold;
+}
+.button {
+	border-radius: 8px;
+	display: inline-block;
+	font: bold $font-size-h5 $font-secondary;
+	letter-spacing: $spacing-letter-h4;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	padding: calc((#{$height-input} - 1rem) / 2) 5px;    // Fix for vertical align issue with links. 1rem is default page font-size.
+	&-light {
+		@extend .button;
+		background: $color-text-alt;
+		border: 1px solid $color-text-alt;
+		color: $color-text;
+	}
+	&-long {
+		@extend .button;
+		max-width: $width-max-form-s;
+		width: $width-form-s;
+	}
+	&-normal {
+		@extend .button;
+		background: transparent;
+		border: 1px solid $color-text;
+		color: $color-bg-footer;
+		&:hover {
+			background: $color-text;
+			color: $color-text-alt;
+		}
+	}
+	&-square {
+		width: $height-input;
+	}
+}
+
+.card-tag {
+	background-color: $color-section;
+	display: inline-block;
+	font-size: $font-size-h6;
+	font-weight: bold;
+	letter-spacing: $spacing-letter-h6;
+	margin-bottom: 5px;
+	padding: 7px;
+	text-transform: uppercase;
+	&:hover {
+		background-color: $color-bg-header;
+		color: $color-header;
+	}
+}
+.copyright {
+	font-size: $font-size-h6;
+	font-weight: bold;
+	letter-spacing: $spacing-letter-h6;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.divider, .divider-light {
+	width: 98%;
+	overflow-x: hidden;
+	h1, h2 {
+		display: inline-block;
+		font-size: $font-size-h2;
+		letter-spacing: $spacing-letter-h2;
+		padding-right: 30px;
+		position: relative;
+		text-transform: uppercase;
+		span {
+			color: darken($color-section, 50%);
+		}
+		&::after {
+			@include centerY($width: $width-max-website);
+			background-color: #000;
+			content: "";
+			display: block;
+			height: 6px;
+			left: 100%;
+		}
+	}
+}
+.divider-light {
+	h2 {
+		&::after {
+			background-color: $color-text-alt;
+		}
+	}
+}
+
+.hide {
+  display: none;
+}
+.hide-large {
+  @media all and (min-width: $breakpoint-m) {
+    display: none;
+  }
+}
+.hide-small {
+  @media all and (max-width: $breakpoint-m) {
+    display: none;
+  }
+}
+.icons-div {
+  @include flexbox(row wrap, space-around);
+  fill: $color-link;
+  margin: 20px auto;
+  max-width: $width-max-p-s;
+	text-align: center;
+  width: $width-iconsdiv;
+  a {
+    text-decoration: none;
+    &:hover {
+      fill: $color-link-hover;
+    }
+  }
+  .mini {
+    margin: 0;
+    text-align: center;
+  }
+}
+.img {
+  text-align: center;
+  max-width: $width-max-website;
+  &-100 {
+    width: 98.5%;
+  }
+	&-75 {
+    width: 75%;
+  }
+  &-50 {
+    width: 49%;
+  }
+  &-33 {
+    width: 32%;
+  }
+  &-25 {
+    width: 23.5%;
+  }
+}
+.italic {
+  font-style: italic;
+}   
+
+.mini {
+  font-size: $font-size-h5;
+}
+.pagination, .see-more {
+	@include flexbox(column wrap, center);
+	width: 98%;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 95%;
+		li {
+			display: inline-block;
+			font-weight: bold;
+		}
+	}
+  .active {
+    background: $color-text;
+		color: $color-text-alt;
+  }
+	.ellipsis {
+		width: calc(#{$height-input} / 2);
+	}
+}
+.posts-card {
+  display: block;
+  margin: 20px 2px; 
+  padding: 5px;
+  width: $width-form-s;
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: $color-text;
+    font-size: $font-size-h4;
+    letter-spacing: $spacing-letter-h4;
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: $color-link;
+      transition: $transition-hover;
+    }
+  }
+  p {
+    font-size: $font-size-h5;
+  }
+  &-align {
+    margin: 0;
+    padding: 0;
+  }
+  @media all and (min-width: $breakpoint-s) {
+    width: 48%;
+  }
+  @media all and (min-width: $breakpoint-m) {
+    width: 32%;
+    &:hover {
+      transition: $transition-hover-card;
+      transform: $scale-hover-card;
+    }
+  }
+}
+.primary {
+  font-family: $font-primary;
+}
+.secondary {
+  font-family: $font-secondary;
+}
+.related-card {
+  color: $color-text;
+  display: inline-block;
+  margin: 20px auto 30px;
+  max-width: $width-max-p-s;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  width: 90%;
+  &:hover {
+    color: $color-text;
+  }
+  img {
+    overflow: hidden;
+    width: 100%;
+  }
+  h4 {
+    margin: 10px auto;
+    text-align: center;
+    text-decoration: underline;
+  }
+  p, .mini {
+    margin: 10px auto 0;
+  }
+  @media all and (min-width: $breakpoint-m) {
+    padding: 0 10px;
+    width: 350px;
+    &:hover {
+      color: $color-text;
+      overflow: hidden;
+      transition: all .3s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}
+.underline {
+  text-decoration: underline;
+}
+.underline-double {
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+/* ======================================
+//  ID styles
+// ====================================*/
+
+#dribbble {
+  &:hover {
+    color: $color-logo-dribbble;
+    transition: $transition-hover;
+  }
+}
+#facebook {
+  &:hover {
+    color: $color-logo-facebook;
+    transition: $transition-hover;
+  }
+}
+#github {
+  &:hover {
+    color: $color-logo-github;
+    transition: $transition-hover;
+  }
+}
+#google-plus {
+  &:hover {
+    color: $color-logo-google-plus;
+    transition: $transition-hover;
+  }
+}
+#instagram {
+  &:hover {
+    color: $color-logo-instagram;
+    transition: $transition-hover;
+  }
+}
+#linkedin {
+  &:hover {
+    color: $color-logo-linkedin;
+    transition: $transition-hover;
+  }
+}
+#medium {
+  &:hover {
+    color: $color-logo-medium;
+    transition: $transition-hover;
+  }
+}

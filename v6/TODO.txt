@@ -1,0 +1,36 @@
+TO DO:
+
+ADMIN 
+
+- Learn npm and gulp for auto ES5/es6 and webkit
+- Restructure git profile so all versions of the site are in one repo
+
+
+CODE
+
+- Add bottom border to search results (to seperate them slightly)
+- Add jQuery for search bar (and show by changing fill color)
+- Add styles for pre and code tags to base (highlight.js, atom-one-dark)
+- Change list card to scale on hover, and make a greater area hyperlinked.
+- Keep backgrounds internal to Textpattern (ask on forum about flat css being served when db is requested)
+- Create SEO friendly image names with .htaccess
+- Fix min height on about and posts pages
+- Show links as visited when they have already been opened (:active?)
+- Sort reader view (header appears before logo, quote author doesnt have spacing)
+- Use Oswald for headers in articles
+
+
+FEATURES
+
+- Allow users to share articles on social media
+- Introduce a results div at the top of the page, summarising key results.
+- Introduce tagging system for articles (smd_tags)
+- subscribe to website (rss or plugin?)
+
+
+FORMS
+
+- Design search form on error page
+- Design form error states
+- Make form accessible (aria-labels, fieldsets etc.)
+- Add footer maximum height (layout thrown out on big screens)

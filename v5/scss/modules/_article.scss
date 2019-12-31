@@ -1,0 +1,77 @@
+/* ======================================
+//  Article styles (also used for "about")
+// ====================================*/
+
+.article {
+  @include flexbox(row wrap, center, flex, $align-items: flex-start);
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  figure {
+    @include flexbox(row wrap, center);
+    margin: 0;
+    max-width: 1920px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;    
+    img {
+      width: 100%;
+    }
+  }
+  blockquote {
+    margin: 20px auto;
+    max-width: $width-max-p-s;
+    text-align: center;
+  }
+  li {
+    padding: 0 10px;
+  }
+  ol, ul {
+    max-width: $width-max-p-s;
+    text-align: justify;
+  }
+  p {
+    margin: 30px auto;
+    max-width: $width-max-p-s;
+    text-align: justify;
+  }
+	&-contents {
+    padding: 0 10px;
+    width: 98%;
+  }
+	&-toc {
+		@include flexbox;
+		font-size: $font-size-contents;
+		height: calc(100vh - #{$height-header});
+		max-width: 400px;
+		position: sticky;
+		top: $height-header;
+		width: calc(100% - 1080px);
+		div {
+			font-family: $font-secondary;
+			ol {
+				padding-left: 35px;
+				margin: 0;
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media all and (min-width: $breakpoint-m) {
+  .article {
+    margin: $height-header auto 0;
+    blockquote, p, ol, ul {
+      max-width: $width-max-p-m;
+    }
+		&-contents {
+      max-width: $width-max-website;
+    }
+  }
+}
+
+@media all and (max-width: $breakpoint-l) {
+  .article-toc {
+		display: none;
+  }
+}

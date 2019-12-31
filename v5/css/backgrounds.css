@@ -1,0 +1,37 @@
+/* ======================================
+//  Background styles
+// ====================================*/
+#appy {
+  background: linear-gradient(rgba(58, 60, 63, 0.6), rgba(58, 60, 63, 0.6)), url("../images/backgrounds/appy.png") center/cover no-repeat fixed; }
+  #appy .project-desc {
+    color: #FFF; }
+
+#ebm {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/backgrounds/ebm.jpg") center/cover no-repeat fixed; }
+  #ebm .project-desc {
+    color: #FFF; }
+
+#more {
+  background-color: #222; }
+  #more .project-desc {
+    color: #FFF; }
+
+#perlego {
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url("../images/backgrounds/perlego.png") center/cover no-repeat fixed; }
+  #perlego .project-desc {
+    color: #FFF; }
+
+#polygon {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/backgrounds/polygon3.jpg") center/cover no-repeat fixed; }
+  #polygon .project-desc {
+    color: #FFF; }
+
+#rules {
+  background: linear-gradient(rgba(172, 204, 255, 0.7), rgba(172, 204, 255, 0.7)), url("../images/backgrounds/rules.jpg") center/cover no-repeat fixed; }
+
+#website {
+  background: linear-gradient(rgba(186, 115, 121, 0.4), rgba(186, 115, 121, 0.4)), url("../images/backgrounds/website.jpg") center/cover no-repeat fixed; }
+  #website .project-desc {
+    color: #FFF; }
+
+/*# sourceMappingURL=backgrounds.css.map */
