@@ -1,10 +1,10 @@
-/* Error: expected "{".
- *    ,
- * 22 | $color-primary: #C33;                                      // Primary colour
- *    |                     ^
- *    '
- *   scss/features/_variables.scss 22:21  @import
- *   scss/main.scss 2:9                   root stylesheet */
+/* Error: Undefined variable.
+ *   ,
+ * 9 |   font-family: $font-primary;
+ *   |                ^^^^^^^^^^^^^
+ *   '
+ *   scss/base/_base.scss 9:16  @import
+ *   scss/main.scss 7:9         root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 22 \2502  $color-primary: #C33;                                      // Primary colour\d\a    \2502                      ^\a    \2575 \a   scss/features/_variables.scss 22:21  @import\a   scss/main.scss 2:9                   root stylesheet';
+  content: "Error: Undefined variable.\a   \2577 \a 9 \2502    font-family: $font-primary;\d\a   \2502                 ^^^^^^^^^^^^^\a   \2575 \a   scss/base/_base.scss 9:16  @import\a   scss/main.scss 7:9         root stylesheet";
 }
