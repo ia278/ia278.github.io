@@ -1,0 +1,53 @@
+/* ======================================
+//  Base element styles
+// ====================================*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-family: $font-primary;
+  font-size: $font-size;
+	scroll-behavior: smooth;
+}
+body {
+  background: $color-bg;
+  color: $color-text;
+	line-height: $line-height;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: $color-link;
+  &:active {
+    color: $color-link-hover;
+  }
+  &:hover {
+    color: $color-link-hover;
+    transition: $transition-hover;
+  }
+}
+blockquote {
+  color: $color-primary;
+  font-family: $font-primary;
+  font-size: $font-size-h3-mob;
+  font-weight: bold;
+  margin: 16px auto;
+  &::before, &::after {
+    background-color: $color-primary;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 24px auto;
+    width: 50%;
+  }
+}
+
+
+
+@media all and (min-width: $breakpoint-m) {
+	// blockquote
+	// figcaption
+	// h1-h6
+	// a
+	// p
+}
