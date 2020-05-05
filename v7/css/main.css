@@ -161,51 +161,5 @@ template {
 /*========================================================================== 
     RESET FINISHES HERE
 ===========================================================================*/
-/* ======================================
-//  Base element styles
-// ====================================*/
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #FFF;
-  color: #000;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  color: #C33;
-}
-a:active {
-  color: #8f2424;
-}
-a:hover {
-  color: #8f2424;
-  transition: 0.5s ease;
-}
-
-blockquote {
-  color: #C33;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.4375rem;
-  font-weight: bold;
-  margin: 16px auto;
-}
-blockquote::before, blockquote::after {
-  background-color: #C33;
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 24px auto;
-  width: 50%;
-}
 
 /*# sourceMappingURL=main.css.map */
