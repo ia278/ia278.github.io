@@ -47,9 +47,27 @@ blockquote {
     width: 50%;
   }
 }
+button, .button {
+	background: $color-bg;
+	border-color: $color-text;
+	border-radius: 8px;
+	font: bold $font-size-h6-mob $font-secondary;
+	height: $height-button;
+	letter-spacing: 3px;
+	min-width: $height-button;
+	max-width: $width-max-text;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover, .button-active {
+    background: $color-text;
+    color: $color-bg;
+	}
+}
 figcaption {
 	font: bold $font-size-h6 $font-primary;
+	margin: 0 auto;
 	max-width: $width-max-text;
+	text-align: center;
 }
 h1 {
 	font: bold $font-size-h1-mob $font-secondary;
@@ -84,6 +102,16 @@ h6 {
 iframe {
   text-align: center;
 }
+
+
+
+input[type=search] {
+	
+}
+
+
+
+
 li {
   margin: 16px auto;
 }
@@ -93,10 +121,6 @@ ol, ul {
 	max-width: $width-max-text;
 	text-align: justify;
 }
-
-
-
-
 p {
 	font-size: $font-size-h4-mob;
 	margin: 0 auto;
@@ -112,10 +136,8 @@ p {
 	blockquote {
 		font-size: $font-size-h3;
 	}
-	figcaption {
+	button, .button, figcaption {
 		font-size: $font-size-h6;
-		margin: 0 auto;
-		text-align: center;
 	}
 	h1 {
 	font-size: $font-size-h1;
@@ -135,6 +157,4 @@ p {
 	h6 {
 	font-size: $font-size-h6;
 	}
-
-
 }

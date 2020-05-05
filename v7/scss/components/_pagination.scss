@@ -1,0 +1,34 @@
+/* ======================================
+//  Pagination styles
+// ====================================*/
+
+.pagination {
+	list-style: none;
+	margin: 0 auto;
+	max-width: $width-max-text;
+}
+
+
+.pagination {
+	@include flexbox(column wrap, center);
+	margin: 0 auto;
+	max-width: $width-max-text;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 95%;
+		li {
+			display: inline-block;
+			font-weight: bold;
+		}
+	}
+  .active {
+    background: $color-text;
+		color: $color-text-alt;
+  }
+	.ellipsis {
+		width: calc(#{$height-input} / 2);
+	}
+}

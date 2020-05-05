@@ -1,0 +1,38 @@
+/* ======================================
+//  Class styles
+// ====================================*/
+
+
+.button {
+	background: $color-bg;
+	border-color: $color-text;
+	border-radius: 8px;
+	font: bold $font-size-h6-mob $font-secondary;
+	height: $height-button;
+	letter-spacing: 3px;
+	min-width: $height-button;
+	max-width: $width-max-text;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover {
+    background: $color-text;
+    color: $color-bg;
+	}
+}
+
+.button-active {
+	background: $color-bg;
+	border-color: $color-text;
+	border-radius: 8px;
+	font: bold $font-size-h6-mob $font-secondary;
+	height: $height-button;
+	letter-spacing: 3px;
+	min-width: $height-button;
+	max-width: $width-max-text;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover, .button-active {
+    background: $color-text;
+    color: $color-bg;
+	}
+}
