@@ -161,5 +161,160 @@ template {
 /*========================================================================== 
     RESET FINISHES HERE
 ===========================================================================*/
+/* ======================================
+//  Base element styles
+// ====================================*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF;
+  box-sizing: border-box;
+  color: #000;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #C33;
+  font-size: 1.1875rem;
+  max-width: 680px;
+  text-align: justify;
+}
+a:active {
+  color: #FEF160;
+}
+a:hover {
+  color: #8f2424;
+  transition: 0.5s ease;
+}
+
+blockquote {
+  color: #C33;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4375rem;
+  font-weight: bold;
+  margin: 16px auto;
+  max-width: 680px;
+  text-align: center;
+}
+blockquote::before, blockquote::after {
+  background-color: #C33;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 24px auto;
+  width: 50%;
+}
+
+figcaption {
+  font: bold 0.875rem "Raleway", sans-serif;
+  max-width: 680px;
+}
+
+h1 {
+  font: bold 2.0625rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: bold 1.75rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: bold 1.4375rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font: bold 1.1875rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font: bold 1rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font: bold 0.875rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+iframe {
+  text-align: center;
+}
+
+li {
+  margin: 16px auto;
+}
+
+ol, ul {
+  font-size: 1.1875rem;
+  margin: 40px auto;
+  max-width: 680px;
+  text-align: justify;
+}
+
+p {
+  font-size: 1.1875rem;
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: justify;
+}
+
+@media all and (min-width: 768px) {
+  a, p, ol, ul {
+    font-size: 1.25rem;
+  }
+
+  blockquote {
+    font-size: 1.5625rem;
+  }
+
+  figcaption {
+    font-size: 0.875rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5625rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

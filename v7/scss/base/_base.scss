@@ -1,0 +1,140 @@
+/* ======================================
+//  Base element styles
+// ====================================*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-family: $font-primary;
+  font-size: $font-size;
+	scroll-behavior: smooth;
+}
+body {
+  background: $color-bg;
+  box-sizing: border-box;
+  color: $color-text;
+	line-height: $line-height;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: $color-link;
+	font-size: $font-size-h4-mob;
+	max-width: $width-max-text;
+	text-align: justify;
+  &:active {
+    color: $color-secondary;
+  }
+  &:hover {
+    color: $color-link-hover;
+    transition: $transition-hover;
+  }
+}
+blockquote {
+	color: $color-primary;
+  font-family: $font-primary;
+  font-size: $font-size-h3-mob;
+  font-weight: bold;
+  margin: 16px auto;
+	max-width: $width-max-text;
+	text-align: center;
+  &::before, &::after {
+    background-color: $color-primary;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 24px auto;
+    width: 50%;
+  }
+}
+figcaption {
+	font: bold $font-size-h6 $font-primary;
+	max-width: $width-max-text;
+}
+h1 {
+	font: bold $font-size-h1-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h2 {
+	font: bold $font-size-h2-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h3 {
+	font: bold $font-size-h3-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h4 {
+	font: bold $font-size-h4-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h5 {
+	font: bold $font-size-h5-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h6 {
+	font: bold $font-size-h6-mob $font-secondary;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+iframe {
+  text-align: center;
+}
+li {
+  margin: 16px auto;
+}
+ol, ul {
+	font-size: $font-size-h4-mob;
+  margin: 40px auto;
+	max-width: $width-max-text;
+	text-align: justify;
+}
+
+
+
+
+p {
+	font-size: $font-size-h4-mob;
+	margin: 0 auto;
+	max-width: $width-max-text;
+	text-align: justify;
+}
+
+
+@media all and (min-width: $breakpoint-m) {
+	a, p, ol, ul {
+		font-size: $font-size-h4;
+	}
+	blockquote {
+		font-size: $font-size-h3;
+	}
+	figcaption {
+		font-size: $font-size-h6;
+		margin: 0 auto;
+		text-align: center;
+	}
+	h1 {
+	font-size: $font-size-h1;
+	}
+	h2 {
+	font-size: $font-size-h2;
+	}
+	h3 {
+	font-size: $font-size-h3;
+	}
+	h4 {
+	font-size: $font-size-h4;
+	}
+	h5 {
+	font-size: $font-size-h5;
+	}
+	h6 {
+	font-size: $font-size-h6;
+	}
+
+
+}

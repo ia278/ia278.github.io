@@ -1,0 +1,60 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Breakpoints
+
+$breakpoint-xs: 320px;                                     // XS device breakpoint (e.g. phones)
+$breakpoint-s: 576px;                                      // S devices breakpoint(e.g. large phones)
+$breakpoint-m: 768px;                                      // M devices breakpoint(e.g. tablets)
+$breakpoint-l: 992px;                                      // L devices breakpoint(e.g. laptops)
+$breakpoint-xl: 1280px;                                    // XL devices breakpoint (e.g. large laptops)
+$breakpoint-xxl: 1920px;                                   // XXL devices breakpoint (e.g. desktops)
+
+
+// Core variables
+
+$color-bg: #FFF;                                           // Background colour
+$color-text: #000;                                         // Text colour
+$font-primary: "Raleway", sans-serif;                      // Primary font (e.g. body, descriptions)
+$font-secondary: "Montserrat", sans-serif;                 // Secondary font (e.g headings, buttons)
+$font-logo: "Josefin Sans", sans-serif;                    // Logo font
+$font-size: 16px;                                          // Font size
+$line-height: 1.5;                                         // Line height
+
+
+// Colours
+
+$color-primary: #C33;                                      // Primary colour
+$color-secondary: #FEF160;                                 // Secondary colour
+$color-dark: #222;                                         // Dark colour
+
+$color-link: $color-primary;                               // Link colour
+$color-link-hover: darken($color-link, 15%);               // Link colour on hover
+
+
+// Font sizes
+
+$font-size-h1: 2.5rem;                                     // h1 font size
+$font-size-h2: 2rem;                                       // h2 font size
+$font-size-h3: 1.5625rem;                                  // h3 font size
+$font-size-h4: 1.25rem;                                    // h4 font size
+$font-size-h5: 1rem;                                       // h5 font size
+$font-size-h6: 0.875rem;                                   // h6 font size
+
+$font-size-h1-mob: 2.0625rem;                              // h1 mobile font size
+$font-size-h2-mob: 1.75rem;                                // h2 mobile font size
+$font-size-h3-mob: 1.4375rem;                              // h3 mobile font size
+$font-size-h4-mob: 1.1875rem;                              // h4 mobile font size
+$font-size-h5-mob: 1rem;                                   // h5 mobile font size
+$font-size-h6-mob: 0.875rem;                               // h6 mobile font size
+
+
+// Scaling and transitions
+
+$transition-hover: 0.5s ease;                              // Hover transition
+
+
+// Widths and heights
+
+$width-max-text: 680px;                                    // Maximum text width
