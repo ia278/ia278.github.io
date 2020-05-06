@@ -31,6 +31,7 @@ $color-dark: #222;                                         // Dark colour
 
 $color-link: $color-primary;                               // Link colour
 $color-link-hover: darken($color-link, 15%);               // Link colour on hover
+$color-outline: #0066FF;                                   // Outline colour
 
 
 // Font sizes
@@ -56,5 +57,6 @@ $transition-hover: 0.5s ease;                              // Hover transition
 
 
 // Widths and heights
+
 $height-button: 48px;
 $width-max-text: 680px;                                    // Maximum text width

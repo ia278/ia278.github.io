@@ -25,6 +25,9 @@ a {
   &:active {
     color: $color-secondary;
   }
+	&:focus {
+		outline: 1px solid $color-outline;
+	}
   &:hover {
     color: $color-link-hover;
     transition: $transition-hover;
@@ -32,9 +35,7 @@ a {
 }
 blockquote {
 	color: $color-primary;
-  font-family: $font-primary;
-  font-size: $font-size-h3-mob;
-  font-weight: bold;
+	font: bold $font-size-h3-mob $font-primary;
   margin: 16px auto;
 	max-width: $width-max-text;
 	text-align: center;
@@ -46,22 +47,6 @@ blockquote {
     margin: 24px auto;
     width: 50%;
   }
-}
-button, .button {
-	background: $color-bg;
-	border-color: $color-text;
-	border-radius: 8px;
-	font: bold $font-size-h6-mob $font-secondary;
-	height: $height-button;
-	letter-spacing: 3px;
-	min-width: $height-button;
-	max-width: $width-max-text;
-	text-align: center;
-	text-transform: uppercase;
-	&:hover, .button-active {
-    background: $color-text;
-    color: $color-bg;
-	}
 }
 figcaption {
 	font: bold $font-size-h6 $font-primary;
@@ -105,9 +90,17 @@ iframe {
 
 
 
-input[type=search] {
-	
-}
+
+
+
+//input[type=search] {
+//	
+//}
+
+
+
+
+
 
 
 
@@ -136,25 +129,26 @@ p {
 	blockquote {
 		font-size: $font-size-h3;
 	}
-	button, .button, figcaption {
+	figcaption {
 		font-size: $font-size-h6;
 	}
 	h1 {
-	font-size: $font-size-h1;
+		font-size: $font-size-h1;
 	}
 	h2 {
-	font-size: $font-size-h2;
+		font-size: $font-size-h2;
 	}
 	h3 {
-	font-size: $font-size-h3;
+		font-size: $font-size-h3;
 	}
 	h4 {
-	font-size: $font-size-h4;
+		font-size: $font-size-h4;
 	}
 	h5 {
-	font-size: $font-size-h5;
+		font-size: $font-size-h5;
 	}
 	h6 {
-	font-size: $font-size-h6;
+		font-size: $font-size-h6;
 	}
 }
+

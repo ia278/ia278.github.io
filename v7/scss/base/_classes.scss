@@ -2,37 +2,43 @@
 //  Class styles
 // ====================================*/
 
-
-.button {
-	background: $color-bg;
-	border-color: $color-text;
-	border-radius: 8px;
-	font: bold $font-size-h6-mob $font-secondary;
-	height: $height-button;
-	letter-spacing: 3px;
-	min-width: $height-button;
-	max-width: $width-max-text;
-	text-align: center;
-	text-transform: uppercase;
-	&:hover {
-    background: $color-text;
-    color: $color-bg;
-	}
+.border {
+	border: thin solid red;
 }
 
-.button-active {
+.button, .input-search-toggle {
 	background: $color-bg;
-	border-color: $color-text;
+	border: 1px solid $color-text;
 	border-radius: 8px;
-	font: bold $font-size-h6-mob $font-secondary;
+	color: $color-text;
+	display: inline-block;
 	height: $height-button;
-	letter-spacing: 3px;
-	min-width: $height-button;
-	max-width: $width-max-text;
+	padding: 0 16px;
 	text-align: center;
+	text-decoration: none;
+}
+
+.button {
+	font: bold $font-size-h6 $font-secondary;
+	letter-spacing: 3px;
+	line-height: $height-button;
+	min-width: $height-button; // Ensures that button is always a square at its smallest size.
 	text-transform: uppercase;
-	&:hover, .button-active {
+	&:hover {
+		background: $color-text;
+		color: $color-bg;
+	}
+	&:focus {
+		background: $color-text;
+		border-color: $color-outline;
+		color: $color-bg;
+    outline: 1px solid transparent;
+	}
+	&-active {
     background: $color-text;
-    color: $color-bg;
+		color: $color-bg;
+  }
+	&-ellipsis {
+		width: calc(#{$height-button} / 1.5);
 	}
 }

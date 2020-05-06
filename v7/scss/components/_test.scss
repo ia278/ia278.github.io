@@ -1,0 +1,74 @@
+/* ======================================
+//  Styling in development
+// ====================================*/
+
+
+//.input-search-toggle {
+//    max-width: 100%;
+//    margin: 0;
+//    color: #000000;
+//    font-family: "Segoe UI", sans-serif;
+//    font-size: 1.125rem;
+//    line-height: 1.375;
+//    vertical-align: baseline;
+//    height: 2em;
+//    padding: 0.25em 0.1875em;
+//    border: 1px solid #cccccc;
+//    border-radius: 0;
+//    background: #ffffff;
+//  }
+
+
+.search-header-toggle {
+	margin-top: 0.2em;
+	padding: 1em 6% 0.5em;
+	background: #fff;
+}
+
+.input-search-toggle {
+	padding-left: 8px;
+	width: $height-button;
+}
+
+.input-search-toggle:focus {
+	border-color: #0066ff;
+	outline: 1px solid transparent;
+ }
+
+
+
+
+
+
+.search-header-toggle .input-search-toggle {
+    /* Background image for button */
+    background: url("../images/svg/search.svg") no-repeat 6px center;
+    /* General button styling */
+//    background-color: #eee;
+    background-size: 20px;
+//    border-radius: 0.5em;
+    /* Ensures pointer appears */
+    cursor: pointer;
+    /* Padding of text input within field (when opened)*/
+    padding-left: 2em;
+    padding-right: 0;
+    /* Transition style and speed */
+    transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    /* Height and width of search button */
+    height: 36px;
+    width: 36px; 
+  }
+
+  .search-header-toggle .input-search-toggle:hover {
+//    background-color: #f4f4f4;
+  }
+  .search-header-toggle .input-search-toggle:focus {
+    /* Width of input (when opened) */
+    width: 216px;
+    /* Padding of "x" on text input */
+    padding-right: 8px;
+    background-color: white;
+    cursor: auto;
+  }
+
+

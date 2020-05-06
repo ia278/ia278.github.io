@@ -1,18 +1,434 @@
-/* Error: Undefined variable.
- *    ,
- * 29 |         color: $color-text-alt;
- *    |                ^^^^^^^^^^^^^^^
- *    '
- *   scss/components/_pagination.scss 29:10  @import
- *   scss/main.scss 17:5                     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 29 \2502          color: $color-text-alt;\a    \2502                 ^^^^^^^^^^^^^^^\a    \2575 \a   scss/components/_pagination.scss 29:10  @import\a   scss/main.scss 17:5                     root stylesheet";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/*========================================================================== 
+    RESET FINISHES HERE
+===========================================================================*/
+/* ======================================
+//  Base element styles
+// ====================================*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF;
+  box-sizing: border-box;
+  color: #000;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #C33;
+  font-size: 1.1875rem;
+  max-width: 680px;
+  text-align: justify;
+}
+a:active {
+  color: #FEF160;
+}
+a:focus {
+  outline: 1px solid #0066FF;
+}
+a:hover {
+  color: #8f2424;
+  transition: 0.5s ease;
+}
+
+blockquote {
+  color: #C33;
+  font: bold 1.4375rem "Raleway", sans-serif;
+  margin: 16px auto;
+  max-width: 680px;
+  text-align: center;
+}
+blockquote::before, blockquote::after {
+  background-color: #C33;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 24px auto;
+  width: 50%;
+}
+
+figcaption {
+  font: bold 0.875rem "Raleway", sans-serif;
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: center;
+}
+
+h1 {
+  font: bold 2.0625rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: bold 1.75rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: bold 1.4375rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font: bold 1.1875rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font: bold 1rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font: bold 0.875rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+iframe {
+  text-align: center;
+}
+
+li {
+  margin: 16px auto;
+}
+
+ol, ul {
+  font-size: 1.1875rem;
+  margin: 40px auto;
+  max-width: 680px;
+  text-align: justify;
+}
+
+p {
+  font-size: 1.1875rem;
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: justify;
+}
+
+@media all and (min-width: 768px) {
+  a, p, ol, ul {
+    font-size: 1.25rem;
+  }
+
+  blockquote {
+    font-size: 1.5625rem;
+  }
+
+  figcaption {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5625rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+}
+/* ======================================
+//  Class styles
+// ====================================*/
+.border {
+  border: thin solid red;
+}
+
+.button, .input-search-toggle {
+  background: #FFF;
+  border: 1px solid #000;
+  border-radius: 8px;
+  color: #000;
+  display: inline-block;
+  height: 48px;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button {
+  font: bold 0.875rem "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  line-height: 48px;
+  min-width: 48px;
+  text-transform: uppercase;
+}
+.button:hover {
+  background: #000;
+  color: #FFF;
+}
+.button:focus {
+  background: #000;
+  border-color: #0066FF;
+  color: #FFF;
+  outline: 1px solid transparent;
+}
+.button-active {
+  background: #000;
+  color: #FFF;
+}
+.button-ellipsis {
+  width: calc(48px / 1.5);
+}
+
+/* ======================================
+//  Pagination styles
+// ====================================*/
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 680px;
+}
+.pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pagination ul li {
+  display: inline-block;
+}
+.pagination ul li:first-child {
+  transform: scale(-1);
+}
+
+/* ======================================
+//  Styling in development
+// ====================================*/
+.search-header-toggle {
+  margin-top: 0.2em;
+  padding: 1em 6% 0.5em;
+  background: #fff;
+}
+
+.input-search-toggle {
+  padding-left: 8px;
+  width: 48px;
+}
+
+.input-search-toggle:focus {
+  border-color: #0066ff;
+  outline: 1px solid transparent;
+}
+
+.search-header-toggle .input-search-toggle {
+  /* Background image for button */
+  background: url("../images/svg/search.svg") no-repeat 6px center;
+  /* General button styling */
+  background-size: 20px;
+  /* Ensures pointer appears */
+  cursor: pointer;
+  /* Padding of text input within field (when opened)*/
+  padding-left: 2em;
+  padding-right: 0;
+  /* Transition style and speed */
+  transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  /* Height and width of search button */
+  height: 36px;
+  width: 36px;
+}
+
+.search-header-toggle .input-search-toggle:focus {
+  /* Width of input (when opened) */
+  width: 216px;
+  /* Padding of "x" on text input */
+  padding-right: 8px;
+  background-color: white;
+  cursor: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
