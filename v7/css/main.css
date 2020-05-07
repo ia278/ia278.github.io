@@ -361,6 +361,48 @@ p {
   width: calc(48px / 1.5);
 }
 
+.input-search-toggle {
+  background: #FFF url("../images/svg/search.svg") no-repeat 6px center;
+  background-size: 20px;
+  cursor: pointer;
+  height: 36px;
+  /* Height of button */
+  padding-left: 32px;
+  /* Padding of text input within field (when opened)*/
+  padding-right: 0;
+  /* Padding of text input within field (when opened)*/
+  transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  width: 36px;
+  /* Width of button */
+}
+.input-search-toggle:focus {
+  border-color: #0066ff;
+  cursor: auto;
+  outline: 1px solid transparent;
+  padding-right: 8px;
+  /* Padding of "x" on text input */
+  width: 100%;
+}
+
+.input-search {
+  background: #FFF url("../images/svg/search.svg") no-repeat 6px center;
+  background-size: 20px;
+  height: 36px;
+  /* Height of button */
+  padding-left: 32px;
+  /* Padding of text input within field (when opened)*/
+}
+.input-search:focus {
+  border-color: #0066ff;
+  outline: 1px solid transparent;
+  padding-right: 8px;
+  /* Padding of "x" on text input */
+}
+
+.input-search:focus::placeholder, .input-search-toggle:focus::placeholder {
+  color: transparent;
+}
+
 /* ======================================
 //  Pagination styles
 // ====================================*/
@@ -378,66 +420,49 @@ p {
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 100%;
 }
 .pagination ul li {
   display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .pagination ul li:first-child {
   transform: scale(-1);
 }
 
 /* ======================================
+//  Search input styling
+// ====================================*/
+.search, .search-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background: #FFF;
+  margin: 40px auto 0;
+}
+
+.search {
+  max-width: 680px;
+}
+.search .input-search {
+  background-size: 24px;
+  flex-grow: 2;
+  height: 48px;
+  margin-right: 16px;
+}
+
+.search-header {
+  max-width: 216px;
+}
+.search-header .input-search {
+  width: 100%;
+}
+
+/* ======================================
 //  Styling in development
 // ====================================*/
-.search-header-toggle, .search-header {
-  margin-top: 0.2em;
-  padding: 1em 6% 0.5em;
-  background: #fff;
-}
-
-.input-search-toggle {
-  background-size: 20px;
-  cursor: pointer;
-  padding-left: 8px;
-  width: 48px;
-  /* Padding of text input within field (when opened)*/
-  padding-left: 2em;
-  padding-right: 0;
-  /* Transition style and speed */
-  transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  /* Height and width of search button */
-  height: 36px;
-  width: 36px;
-}
-.input-search-toggle:focus {
-  border-color: #0066ff;
-  outline: 1px solid transparent;
-}
-
-.input-search-toggle {
-  /* Background image for button */
-  background: url("../images/svg/search.svg") no-repeat 6px center;
-  /* General button styling */
-  background-size: 20px;
-  /* Ensures pointer appears */
-  cursor: pointer;
-  /* Padding of text input within field (when opened)*/
-  padding-left: 2em;
-  padding-right: 0;
-  /* Transition style and speed */
-  transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  /* Height and width of search button */
-  height: 36px;
-  width: 36px;
-}
-
-.input-search-toggle:focus {
-  /* Width of input (when opened) */
-  width: 216px;
-  /* Padding of "x" on text input */
-  padding-right: 8px;
-  background-color: white;
-  cursor: auto;
-}
 
 /*# sourceMappingURL=main.css.map */

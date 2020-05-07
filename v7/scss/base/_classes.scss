@@ -42,3 +42,40 @@
 		width: calc(#{$height-button} / 1.5);
 	}
 }
+
+.input-search-toggle {
+	background: $color-bg url("../images/svg/search.svg") no-repeat 6px center; 
+	background-size: 20px;
+	cursor: pointer;
+	height: 36px;         /* Height of button */
+  padding-left: 32px; 	/* Padding of text input within field (when opened)*/
+  padding-right: 0;    	/* Padding of text input within field (when opened)*/
+	transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;  
+  width: 36px;          /* Width of button */
+	&:focus {
+		border-color: #0066ff;
+		cursor: auto;
+		outline: 1px solid transparent;
+		padding-right: 8px; /* Padding of "x" on text input */
+		width: 100%
+	 }
+}
+
+.input-search {
+	background: $color-bg url("../images/svg/search.svg") no-repeat 6px center; 
+	background-size: 20px;
+	height: 36px;         /* Height of button */
+  padding-left: 32px; 	/* Padding of text input within field (when opened)*/
+//	width: 216px;
+	&:focus {
+		border-color: #0066ff;
+		outline: 1px solid transparent;
+		padding-right: 8px; /* Padding of "x" on text input */
+	 }
+}
+
+.input-search, .input-search-toggle {
+	&:focus::placeholder {
+		color: transparent;
+	}
+}

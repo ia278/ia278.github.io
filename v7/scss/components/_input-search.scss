@@ -1,0 +1,27 @@
+/* ======================================
+//  Search input styling
+// ====================================*/
+
+.search, .search-header {
+	@include flexbox(row wrap, space-between);
+	background: $color-bg;
+	margin: 40px auto 0;
+}
+
+.search {
+	max-width: $width-max-text;
+	.input-search {
+		background-size: 24px;
+		flex-grow: 2;
+		height: $height-button;
+		margin-right: 16px;
+	}
+}
+
+.search-header {
+	max-width: 216px;
+	.input-search {
+		width: 100%;
+	}
+}
+
