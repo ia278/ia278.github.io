@@ -324,7 +324,7 @@ p {
   border: thin solid red;
 }
 
-.button, .input-search-toggle {
+.button, .input-search, .input-search-toggle {
   background: #FFF;
   border: 1px solid #000;
   border-radius: 8px;
@@ -389,23 +389,32 @@ p {
 /* ======================================
 //  Styling in development
 // ====================================*/
-.search-header-toggle {
+.search-header-toggle, .search-header {
   margin-top: 0.2em;
   padding: 1em 6% 0.5em;
   background: #fff;
 }
 
 .input-search-toggle {
+  background-size: 20px;
+  cursor: pointer;
   padding-left: 8px;
   width: 48px;
+  /* Padding of text input within field (when opened)*/
+  padding-left: 2em;
+  padding-right: 0;
+  /* Transition style and speed */
+  transition: width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  /* Height and width of search button */
+  height: 36px;
+  width: 36px;
 }
-
 .input-search-toggle:focus {
   border-color: #0066ff;
   outline: 1px solid transparent;
 }
 
-.search-header-toggle .input-search-toggle {
+.input-search-toggle {
   /* Background image for button */
   background: url("../images/svg/search.svg") no-repeat 6px center;
   /* General button styling */
@@ -422,7 +431,7 @@ p {
   width: 36px;
 }
 
-.search-header-toggle .input-search-toggle:focus {
+.input-search-toggle:focus {
   /* Width of input (when opened) */
   width: 216px;
   /* Padding of "x" on text input */
