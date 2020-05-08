@@ -1,0 +1,113 @@
+/* ======================================
+//  Header styles
+// ====================================*/
+
+.header {
+	@include flexbox(row wrap, center);
+	background: $color-bg;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  z-index: 1000;
+	a {
+		color: $color-light;
+		font: bold 13px $font-secondary;
+		letter-spacing: 3px;
+		text-decoration: none;
+		&:hover {
+			color: $color-link;
+			transition: $transition-hover;
+		}
+	}
+	&-container {
+    @include flexbox(row wrap, space-between);
+		height: 100%;
+    width: 100%;
+  }
+	&-logo {
+    @include flexbox(row wrap, center);
+		margin-left: 15px;
+		order: -2;
+    width: $width-logo;    // Required for IE to display SVG
+    svg {
+			fill: $color-text;
+    }
+  }
+	&-links {
+		@include flexbox(column wrap, space-around);
+		background: $color-dark;
+		height: $height-header-s;
+		text-transform: uppercase;
+    width: 100%;
+    ul {
+      @include flexbox(row wrap, space-between);
+			height: 100%;
+      list-style-type: none;
+      margin: 0;
+			max-width: 360px;
+      padding: 0;
+			text-align: center;
+			width: calc(100% - 30px);
+
+			li {
+				@include flexbox(column wrap, center); // Ensures vertical centering  
+				height: 100%;
+				margin: 0;
+				position: relative;
+//				&:first-child {
+//					margin-left: 15px;
+//				}
+//				&:last-child {
+//					margin-right: 15px;
+//				}
+      }
+    }
+  }
+	&-search {
+		@include flexbox(row wrap, center);
+		margin-right: 15px;
+		order: -1;
+		padding: 10px 0;
+		width: $width-logo;    // Required for IE to display SVG
+		svg {
+			fill: invert($color-text);
+			fill: $color-text; // Hide to show search icon
+		}
+  }
+}
+
+@media all and (min-width: $breakpoint-m) {
+  .header {
+		background: $color-dark;
+    height: $height-header-m;
+		a {
+			font-size: 15px;
+		}
+    &-container {
+      max-width: $breakpoint-xxl;
+    }
+    &-logo {
+			order: 0;
+			svg {
+				fill: $color-light;
+			}
+    }
+    &-links {
+			height: 100%;
+			order: 0;
+			width: auto;
+			ul {
+				max-width: 520px;
+				width: 100%;
+				
+			}
+    }
+		&-search {
+			order: 0;
+			svg {
+				fill: $color-light;
+			}
+    }
+  }
+}

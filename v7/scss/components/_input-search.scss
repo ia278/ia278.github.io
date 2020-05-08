@@ -11,6 +11,7 @@
 .search {
 	max-width: $width-max-text;
 	.input-search {
+		background-position: 12px center;
 		background-size: 24px;
 		flex-grow: 2;
 		height: $height-button;

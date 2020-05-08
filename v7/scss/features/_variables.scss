@@ -28,6 +28,7 @@ $line-height: 1.5;                                         // Line height
 $color-primary: #C33;                                      // Primary colour
 $color-secondary: #FEF160;                                 // Secondary colour
 $color-dark: #222;                                         // Dark colour
+$color-light: #FFF;                                        // Light colour 
 
 $color-link: $color-primary;                               // Link colour
 $color-link-hover: darken($color-link, 15%);               // Link colour on hover
@@ -59,6 +60,9 @@ $transition-hover: 0.5s ease;                              // Hover transition
 // Widths and heights
 
 $height-button: 48px;                                      // Button height
+$height-header-s: 36px;                                    // Header height (small screens, bottom section only)
+$height-header-m: 56px;                                    // Header height (medium screens)
+$width-logo: 40px;                                         // Logo width
 $width-max-search-header: 216px;                           // Maximum search width for header
 $width-max-text: 680px;                                    // Maximum text width
 
