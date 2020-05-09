@@ -460,6 +460,8 @@ p {
   background: #222;
   height: 36px;
   text-transform: uppercase;
+}
+.header-links:nth-child(2) {
   width: 100%;
 }
 .header-links ul {
@@ -489,20 +491,29 @@ p {
 .header-search {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-content: center;
   align-items: center;
   margin-right: 15px;
   order: -1;
-  padding: 10px 0;
-  width: 40px;
-}
-.header-search svg {
-  fill: white;
-  fill: #000;
+  width: 216px;
 }
 
-@media all and (min-width: 768px) {
+.header-active::before {
+  background-color: #FFF;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 4px;
+  top: 2px;
+  width: 100%;
+}
+.header-active:hover::before {
+  background-color: #C33;
+  transition: 0.5s ease;
+}
+
+@media all and (min-width: 992px) {
   .header {
     background: #222;
     height: 56px;
@@ -511,9 +522,14 @@ p {
     font-size: 15px;
   }
   .header-container {
+    margin-left: 15px;
+    margin-right: 15px;
     max-width: 1920px;
   }
   .header-logo {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: calc(216px - 40px);
     order: 0;
   }
   .header-logo svg {
@@ -524,15 +540,27 @@ p {
     order: 0;
     width: auto;
   }
+  .header-links:nth-child(2) {
+    flex-grow: 2;
+    max-width: 600px;
+    width: auto;
+  }
   .header-links ul {
+    padding: 0 40px;
     max-width: 520px;
     width: 100%;
   }
   .header-search {
     order: 0;
+    margin: 0;
   }
-  .header-search svg {
-    fill: #FFF;
+  .header .search-header {
+    background-color: #222;
+    width: 216px;
+  }
+  .header .input-search-toggle {
+    border-color: #222;
+    width: 100%;
   }
 }
 /* ======================================
@@ -572,8 +600,7 @@ p {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  background: #FFF;
-  margin: 40px auto 0;
+  background-color: #FFF;
 }
 
 .search {
@@ -588,7 +615,9 @@ p {
 }
 
 .search-header {
+  justify-content: flex-end;
   max-width: 216px;
+  width: 100%;
 }
 .search-header .input-search {
   width: 100%;

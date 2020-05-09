@@ -39,7 +39,9 @@
 		background: $color-dark;
 		height: $height-header-s;
 		text-transform: uppercase;
-    width: 100%;
+		&:nth-child(2) {
+			width: 100%;  // Ensures that links appear on seperate line
+		}
     ul {
       @include flexbox(row wrap, space-between);
 			height: 100%;
@@ -55,29 +57,34 @@
 				height: 100%;
 				margin: 0;
 				position: relative;
-//				&:first-child {
-//					margin-left: 15px;
-//				}
-//				&:last-child {
-//					margin-right: 15px;
-//				}
       }
     }
   }
 	&-search {
-		@include flexbox(row wrap, center);
+		@include flexbox(row wrap, flex-end);
 		margin-right: 15px;
 		order: -1;
-		padding: 10px 0;
-		width: $width-logo;    // Required for IE to display SVG
-		svg {
-			fill: invert($color-text);
-			fill: $color-text; // Hide to show search icon
-		}
+		width: $width-search-header;
   }
 }
 
-@media all and (min-width: $breakpoint-m) {
+.header-active {
+	&::before {
+		background-color: $color-light;
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 4px;
+		top: 2px;
+		width: 100%;
+	}
+	&:hover::before {
+		background-color: $color-link;
+		transition: $transition-hover;
+	}
+}
+
+@media all and (min-width: $breakpoint-l) {
   .header {
 		background: $color-dark;
     height: $height-header-m;
@@ -85,10 +92,16 @@
 			font-size: 15px;
 		}
     &-container {
+			margin-left: 15px;
+			margin-right: 15px;
       max-width: $breakpoint-xxl;
     }
     &-logo {
+			justify-content: flex-start;
+			margin-left: 0;
+			margin-right: calc(#{$width-search-header} - 40px);
 			order: 0;
+
 			svg {
 				fill: $color-light;
 			}
@@ -97,17 +110,29 @@
 			height: 100%;
 			order: 0;
 			width: auto;
+			&:nth-child(2) {
+				flex-grow: 2;
+				max-width: 600px;
+				width: auto;    // Ensures that links appear on same line
+			}
 			ul {
+				padding: 0 40px;
 				max-width: 520px;
-				width: 100%;
-				
+				width: 100%;	
 			}
     }
 		&-search {
 			order: 0;
-			svg {
-				fill: $color-light;
-			}
+			margin: 0;
     }
+		.search-header {
+			background-color: $color-dark;
+			width: $width-search-header;
+		}
+		.input-search-toggle {
+			border-color: $color-dark;
+			width: 100%;
+		}
   }
+	
 }

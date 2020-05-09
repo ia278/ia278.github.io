@@ -4,8 +4,7 @@
 
 .search, .search-header {
 	@include flexbox(row wrap, space-between);
-	background: $color-bg;
-	margin: 40px auto 0;
+	background-color: $color-bg;
 }
 
 .search {
@@ -20,7 +19,9 @@
 }
 
 .search-header {
-	max-width: 216px;
+	justify-content: flex-end;
+	max-width: $width-search-header;
+	width: 100%;
 	.input-search {
 		width: 100%;
 	}
